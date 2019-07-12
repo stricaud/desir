@@ -26,7 +26,7 @@ fn main() {
     let server = Server::http(&args[1]).unwrap();
 
     for request in server.incoming_requests() {
-        write!(logfile, "[{:?}] {:?} {:?} {:?}\n", Local::now(), request.method(), request.url(), request.headers()).ok();
+        write!(logfile, "[{:?}] from={:?} {:?} {:?} {:?}\n", Local::now(), request.remote_addr(), request.method(), request.url(), request.headers()).ok();
         
         let response = Response::from_string("");
         request.respond(response).ok();
