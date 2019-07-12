@@ -1,0 +1,9 @@
+[package]
+name = "desir"
+version = "0.1.0"
+authors = ["Sebastien Tricaud <sebastien.tricaud@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tiny_http = "0.6.2"
+chrono = "0.4.7"
